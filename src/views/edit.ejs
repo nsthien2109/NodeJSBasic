@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NODEJS BASIC</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="topnav">
+        <a class="active" href="/">Home</a>
+        <a href="/upload-file">Upload Files</a>
+    </div>
+
+    <div class="create-user-container">
+        <form action="/updating/user" method="post">
+            <input type="hidden" name="idUser" value="<%= userEdit.idUser%>">
+
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" value="<%= userEdit.firstName%>" name="firstname" placeholder="Your name..">
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" value="<%= userEdit.lastName%>" name="lastname"
+                placeholder="Your last name..">
+
+            <label for="email">Email</label>
+            <input type="text" id="email" value="<%= userEdit.email%>" name="email" placeholder="Your email..">
+
+            <label for="address">Address</label>
+            <input type="text" id="address" value="<%= userEdit.address%>" name="address" placeholder="Your address..">
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+</body>
+
+</html>
